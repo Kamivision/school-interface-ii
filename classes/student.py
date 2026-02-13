@@ -19,3 +19,5 @@ class Student(Person):
                 students.append(Student(**dict(row)))
         return students
 
+    def __repr__(self):
+        return f"{self.name} {self.school_id}"

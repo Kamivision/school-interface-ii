@@ -9,4 +9,7 @@ school = School('Ridgemont High')
 # creating the menu message 
 mode = input("\nWhat would you like to do?\nOptions:\n1. List All Students\n2. View Individual Student <student_id>\n3. Add a Student\n4. Remove a Student <student_id>\n5. Quit\n")
 
-print(mode)
+if mode == '1':
+    school.list_students() 
+else:
+    pass

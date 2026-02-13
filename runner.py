@@ -11,5 +11,9 @@ mode = input("\nWhat would you like to do?\nOptions:\n1. List All Students\n2. V
 
 if mode == '1':
     school.list_students() 
+elif mode == '2':
+    student_id = input('Enter student id:')
+    student = school.find_student_by_id(student_id)
+    print(str(student))
 else:
-    pass
+    pass 

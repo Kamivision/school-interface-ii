@@ -7,7 +7,7 @@ class Student(Person):
     def __init__(self, name, age, password, role, school_id):
         super().__init__(name, age, password, role)
         self.school_id = school_id
-
+    
     @classmethod
     def objects(cls):
         students = []
@@ -18,6 +18,14 @@ class Student(Person):
             for row in reader:
                 students.append(Student(**dict(row)))
         return students
-
+    
+    def __str__(self):
+        return f"""
+{self.name.upper()}
+---------------
+age: {self.age}
+id: {self.school_id}
+    """
+        
     def __repr__(self):
         return f"{self.name} {self.school_id}"
